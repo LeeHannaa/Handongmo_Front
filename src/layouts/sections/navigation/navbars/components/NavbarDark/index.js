@@ -31,7 +31,7 @@ function NavbarDark() {
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          label: "로그인",
           color: "info",
         }}
         transparent
