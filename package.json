@@ -47,6 +47,7 @@
     "lint": "eslint ./src",
     "prettify": "prettier --write ."
   },
+  "proxy": "http://localhost:8080",
   "eslintConfig": {
     "extends": [
       "react-app",

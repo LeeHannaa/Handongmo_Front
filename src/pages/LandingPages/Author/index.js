@@ -46,26 +46,13 @@ function Author() {
           type: "external",
           route: "http://localhost:8080/handongmo/google/login",
           onClick: () => {
-            // Google 로그인을 위한 요청
             axios
-              .get("/handongmo/google/login")
-              .then(() => {
-                const code = " 실제 코드가 여기에 있어야 함"; // ToDo: 백엔드와 연결 과정 이슈
-
-                // memberId를 이용하여 서버에서 다른 작업을 수행하거나 저장
-                axios
-                  .get(`/api/auth/google/callback?code=${code}`)
-                  .then((response) => {
-                    const memberId = response.data;
-                    console.log("Received memberId:", memberId);
-                    // 여기에서 memberId를 사용하여 원하는 작업 수행
-                  })
-                  .catch((error) => {
-                    console.error("Error fetching memberId:", error);
-                  });
+              .get("http://localhost:8080/handongmo/google/login")
+              .then((response) => {
+                console.log("서버 응답:", response);
               })
               .catch((error) => {
-                console.error("Error redirecting to Google login:", error);
+                console.error("오류 발생:", error);
               });
           },
           label: "로그인",

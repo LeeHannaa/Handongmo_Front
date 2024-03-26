@@ -38,6 +38,7 @@ import Pages from "pages/Presentation/sections/Pages";
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
+import { useSearchParams } from "react-router-dom";
 
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
@@ -46,6 +47,9 @@ import bgImage from "assets/images/bg-presentation.jpg";
 import axios from "axios";
 
 function Presentation() {
+  let [searchParams] = useSearchParams();
+
+  console.log("memberID : ", searchParams.get("memberId"));
   return (
     <>
       <DefaultNavbar
@@ -57,7 +61,8 @@ function Presentation() {
             axios
               .get("http://localhost:8080/handongmo/google/login")
               .then((response) => {
-                console.log("서버 응답:", response);
+                console.log("응답:", response.data);
+                window.href = response.data;
               })
               .catch((error) => {
                 console.error("오류 발생:", error);
@@ -68,6 +73,7 @@ function Presentation() {
         }}
         sticky
       />
+
       <MKBox
         minHeight="75vh"
         width="100%"
@@ -206,10 +212,21 @@ function Presentation() {
                   &nbsp;Share
                 </MKSocialButton>
                 <MKSocialButton
-                  component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  // component="a"
+                  // href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
                   target="_blank"
                   color="pinterest"
+                  onClick={() => {
+                    axios
+                      .get("http://localhost:8080/handongmo/google/login")
+                      .then((response) => {
+                        console.log("응답:", response.data);
+                        window.location.href = response.data;
+                      })
+                      .catch((error) => {
+                        console.error("오류 발생:", error);
+                      });
+                  }}
                 >
                   <i className="fab fa-pinterest" />
                   &nbsp;Pin it
