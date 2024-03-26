@@ -81,6 +81,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
+  // page, 동아리, 글쓰기, 로그인 컴포넌트들 가져옴
   const renderNavbarItems = routes.map(({ name, icon, href, route, collapse }) => (
     <DefaultNavbarDropdown
       key={name}
@@ -448,7 +449,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
       )}
     </Popper>
   );
-
+  // header 부분
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
@@ -486,6 +487,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             ml="auto"
             mr={center ? "auto" : 0}
           >
+            toggle
             {renderNavbarItems}
           </MKBox>
           <MKBox ml={{ xs: "auto", lg: 0 }}>
@@ -522,6 +524,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 </MKButton>
               ))}
           </MKBox>
+          {/* 로그인 뒤쪽 */}
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}

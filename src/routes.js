@@ -49,6 +49,9 @@ import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
 
 // Sections
+const current = 1; // 현재 값에 해당하는 값을 정의합니다.
+
+const dynamicName = current == 2 ? "동호회" : current == 3 ? "학회" : "동아리";
 
 const routes = [
   {
@@ -90,18 +93,23 @@ const routes = [
     ],
   },
   {
-    name: "동아리",
+    name: dynamicName,
     icon: <Icon>article</Icon>,
     collapse: [
       {
         name: "동아리",
+        current: 1,
         description: "All about overview, quick start, license and contents",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+      },
+      {
+        name: "동호회",
+        current: 2,
+        description: "See our colors, icons and typography",
       },
       {
         name: "학회",
+        current: 3,
         description: "See our colors, icons and typography",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
       },
     ],
   },

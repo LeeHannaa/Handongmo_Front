@@ -42,6 +42,7 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
+// main page
 function Presentation() {
   return (
     <>
@@ -105,6 +106,7 @@ function Presentation() {
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
+        {/* 카드 위쪽 부분 */}
         <Counters />
         <DesignBlocks />
         <Pages />
@@ -125,6 +127,7 @@ function Presentation() {
                 }}
               />
             </Grid>
+
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
                 color="info"
