@@ -35,7 +35,7 @@ import MuiLink from "@mui/material/Link";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
-
+import ToggleBtn from "./ToggleButton";
 // Material Kit 2 React example components
 import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
@@ -55,6 +55,14 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const [mobileView, setMobileView] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+
+  // toggle을 위한
+  const [isOn, setisOn] = useState(false);
+
+  const toggleHandler = () => {
+    // isOn의 상태를 변경하는 메소드를 구현
+    setisOn(!isOn);
+  };
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
@@ -345,7 +353,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                   target: "_blank",
                   rel: "noreferrer",
                 };
-
                 const routeComponent = {
                   component: Link,
                   to: item.route,
@@ -487,7 +494,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             ml="auto"
             mr={center ? "auto" : 0}
           >
-            toggle
+            <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
             {renderNavbarItems}
           </MKBox>
           <MKBox ml={{ xs: "auto", lg: 0 }}>

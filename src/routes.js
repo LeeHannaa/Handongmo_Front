@@ -92,6 +92,7 @@ const routes = [
       },
     ],
   },
+
   {
     name: dynamicName,
     icon: <Icon>article</Icon>,

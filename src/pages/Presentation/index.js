@@ -80,7 +80,7 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              한동대 동아리 모음집{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -89,8 +89,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              동아리, 동호회, 학회
             </MKTypography>
           </Grid>
         </Container>
