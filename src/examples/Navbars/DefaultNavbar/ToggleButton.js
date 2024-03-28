@@ -77,7 +77,7 @@ const In = styled.div`
 const Out = styled.div`
   position: absolute;
   top: 8px;
-  left: 7px;
+  left: 20px;
 `;
 
 export default function ToggleBtn({ isOn, toggleHandler }) {

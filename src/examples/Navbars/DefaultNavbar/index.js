@@ -602,3 +602,4 @@ DefaultNavbar.propTypes = {
 };
 
 export default DefaultNavbar;
+// export { isOn };

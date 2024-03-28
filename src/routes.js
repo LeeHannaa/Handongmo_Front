@@ -100,17 +100,17 @@ const routes = [
       {
         name: "동아리",
         current: 1,
-        description: "All about overview, quick start, license and contents",
+        description: "동아리에 참여 하고 싶다면..",
       },
       {
         name: "동호회",
         current: 2,
-        description: "See our colors, icons and typography",
+        description: "동아리보다 자유로운..",
       },
       {
         name: "학회",
         current: 3,
-        description: "See our colors, icons and typography",
+        description: "학과를 위한..",
       },
     ],
   },

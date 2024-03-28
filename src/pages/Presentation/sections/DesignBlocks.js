@@ -31,6 +31,9 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 // Data
 import data from "pages/Presentation/sections/data/designBlocksData";
 
+//toggle
+// import { isOn } from "examples/Navbars/DefaultNavbar";
+
 function DesignBlocks() {
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
@@ -78,7 +81,7 @@ function DesignBlocks() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Huge collection of sections
+            {/* {isOn ? "Huge collection of sections" : "Hello, world!!"} */}
           </MKTypography>
           <MKTypography variant="body1" color="text">
             We have created multiple options for you to put together and customise into pixel
