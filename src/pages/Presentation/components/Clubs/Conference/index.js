@@ -80,7 +80,7 @@ function Presentation() {
                 },
               })}
             >
-              한동대 동아리 모음집{" "}
+              한동대 동아리 모음집
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -89,7 +89,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              동아리, 동호회, 학회
+              {/* 왜 9글자만 해야 정상인 것인가 */}학 회 모 음
             </MKTypography>
           </Grid>
         </Container>

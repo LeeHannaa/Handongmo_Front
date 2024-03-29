@@ -48,7 +48,15 @@ import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
 
+// 동아리, 동호회, 학회
+import Club from "pages/Presentation/components/Clubs/Club";
+import Society from "pages/Presentation/components/Clubs/Society";
+import Conference from "pages/Presentation/components/Clubs/Conference";
+
 // Sections
+const current = 1; // 현재 값에 해당하는 값을 정의합니다.
+
+const dynamicName = current == 2 ? "동호회" : current == 3 ? "학회" : "동아리";
 
 const routes = [
   {
@@ -89,19 +97,31 @@ const routes = [
       },
     ],
   },
+
   {
-    name: "동아리",
+    name: dynamicName,
     icon: <Icon>article</Icon>,
     collapse: [
       {
         name: "동아리",
-        description: "All about overview, quick start, license and contents",
-        href: "https://www.creative-tim.com/learning-lab/react/quick-start/material-kit/",
+        current: 1,
+        description: "동아리에 참여 하고 싶다면..",
+        route: "/pages/Presentation/components/Clubs/Club",
+        component: <Club />,
+      },
+      {
+        name: "동호회",
+        current: 2,
+        description: "동아리보다 자유로운..",
+        route: "/pages/Presentation/components/Clubs/Society",
+        component: <Society />,
       },
       {
         name: "학회",
-        description: "See our colors, icons and typography",
-        href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
+        current: 3,
+        description: "학과를 위한..",
+        route: "/pages/Presentation/components/Clubs/Conference",
+        component: <Conference />,
       },
     ],
   },

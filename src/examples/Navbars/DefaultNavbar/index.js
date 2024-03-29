@@ -35,13 +35,17 @@ import MuiLink from "@mui/material/Link";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
-
+import ToggleBtn from "./ToggleButton";
 // Material Kit 2 React example components
 import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
+
+// recoil
+import { useRecoilState } from "recoil";
+import { isOnState } from "./atoms";
 
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -55,6 +59,14 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const [mobileView, setMobileView] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+
+  // toggle을 위한
+  const [isOn, setisOn] = useRecoilState(isOnState);
+
+  const toggleHandler = () => {
+    // isOn의 상태를 변경하는 메소드를 구현
+    setisOn(!isOn);
+  };
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
@@ -81,6 +93,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
+  // page, 동아리, 글쓰기, 로그인 컴포넌트들 가져옴
   const renderNavbarItems = routes.map(({ name, icon, href, route, collapse }) => (
     <DefaultNavbarDropdown
       key={name}
@@ -344,7 +357,6 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                   target: "_blank",
                   rel: "noreferrer",
                 };
-
                 const routeComponent = {
                   component: Link,
                   to: item.route,
@@ -448,7 +460,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
       )}
     </Popper>
   );
-
+  // header 부분
   return (
     <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
       <MKBox
@@ -486,6 +498,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             ml="auto"
             mr={center ? "auto" : 0}
           >
+            <ToggleBtn isOn={isOn} toggleHandler={toggleHandler} />
             {renderNavbarItems}
           </MKBox>
           <MKBox ml={{ xs: "auto", lg: 0 }}>
@@ -522,6 +535,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
                 </MKButton>
               ))}
           </MKBox>
+          {/* 로그인 뒤쪽 */}
           <MKBox
             display={{ xs: "inline-block", lg: "none" }}
             lineHeight={0}
@@ -551,7 +565,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Material Kit 2",
+  brand: "Handongmo",
   transparent: false,
   light: false,
   action: false,
@@ -592,3 +606,4 @@ DefaultNavbar.propTypes = {
 };
 
 export default DefaultNavbar;
+// export { isOn };
