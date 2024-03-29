@@ -71,13 +71,13 @@ const InOut = styled.div`
 const In = styled.div`
   position: absolute;
   top: 8px;
-  right: 7px;
+  right: 20px;
 `;
 
 const Out = styled.div`
   position: absolute;
   top: 8px;
-  left: 20px;
+  left: 11px;
 `;
 
 export default function ToggleBtn({ isOn, toggleHandler }) {
@@ -86,8 +86,8 @@ export default function ToggleBtn({ isOn, toggleHandler }) {
       <ToggleContainer onClick={toggleHandler}>
         <div className={`toggle-container ${isOn ? "toggle--checked" : null}`}>
           <InOut>
-            <Out className={`${isOn ? "fadein" : "fadeout"}`}>전체</Out>
-            <In className={`${isOn ? "fadeout" : "fadein"}`}>리크루팅</In>
+            <Out className={`${isOn ? "fadein" : "fadeout"}`}>리크루팅</Out>
+            <In className={`${isOn ? "fadeout" : "fadein"}`}>전체</In>
           </InOut>
         </div>
         <div className={`toggle-circle ${isOn ? "toggle--checked" : null}`}></div>

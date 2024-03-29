@@ -83,7 +83,7 @@ function DesignBlocks() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            {isOn ? "Huge collection of sections" : "Hello, world!!"}
+            {isOn ? "리크루팅 중인 동아리" : "전체 동아리"}
           </MKTypography>
           <MKTypography variant="body1" color="text">
             We have created multiple options for you to put together and customise into pixel
