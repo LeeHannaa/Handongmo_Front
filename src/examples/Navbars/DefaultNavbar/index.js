@@ -43,6 +43,10 @@ import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMob
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
+// recoil
+import { useRecoilState } from "recoil";
+import { isOnState } from "./atoms";
+
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
@@ -57,7 +61,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
 
   // toggle을 위한
-  const [isOn, setisOn] = useState(false);
+  const [isOn, setisOn] = useRecoilState(isOnState);
 
   const toggleHandler = () => {
     // isOn의 상태를 변경하는 메소드를 구현
