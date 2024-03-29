@@ -38,42 +38,24 @@ import Pages from "pages/Presentation/sections/Pages";
 // Routes
 import routes from "routes";
 import footerRoutes from "footer.routes";
-import { useSearchParams } from "react-router-dom";
 
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
-// axios
-import axios from "axios";
-
+// main page
 function Presentation() {
-  let [searchParams] = useSearchParams();
-
-  console.log("memberID : ", searchParams.get("memberId"));
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
-          route: "http://localhost:8080/handongmo/google/login",
-          onClick: () => {
-            axios
-              .get("http://localhost:8080/handongmo/google/login")
-              .then((response) => {
-                console.log("응답:", response.data);
-                window.href = response.data;
-              })
-              .catch((error) => {
-                console.error("오류 발생:", error);
-              });
-          },
+          route: "https://www.creative-tim.com/product/material-kit-react",
           label: "로그인",
           color: "info",
         }}
         sticky
       />
-
       <MKBox
         minHeight="75vh"
         width="100%"
@@ -98,7 +80,7 @@ function Presentation() {
                 },
               })}
             >
-              한동대 동아리 모음집{" "}
+              한동대 동아리 모음집
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -107,7 +89,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              동아리, 동호회, 학회
+              {/* 왜 9글자만 해야 정상인 것인가 */}동 아 리 모 음
             </MKTypography>
           </Grid>
         </Container>
@@ -213,21 +195,10 @@ function Presentation() {
                   &nbsp;Share
                 </MKSocialButton>
                 <MKSocialButton
-                  // component="a"
-                  // href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  component="a"
+                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
                   target="_blank"
                   color="pinterest"
-                  onClick={() => {
-                    axios
-                      .get("http://localhost:8080/handongmo/google/login")
-                      .then((response) => {
-                        console.log("응답:", response.data);
-                        window.location.href = response.data;
-                      })
-                      .catch((error) => {
-                        console.error("오류 발생:", error);
-                      });
-                  }}
                 >
                   <i className="fab fa-pinterest" />
                   &nbsp;Pin it
