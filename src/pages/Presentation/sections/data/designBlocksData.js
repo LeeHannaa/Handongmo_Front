@@ -1,25 +1,13 @@
 /*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 메인 페이지 카드 데이터들
 */
-
 const imagesPrefix =
   "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/sections";
 
 export default [
   {
-    title: "Design Block",
-    description: "A selection of 45 page sections that fit perfectly in any combination",
+    title: "전공",
+    description: "전공과 관련된 동아리",
     items: [
       {
         image: `${imagesPrefix}/headers.jpg`,
@@ -108,8 +96,8 @@ export default [
     ],
   },
   {
-    title: "Navigation",
-    description: "30+ components that will help go through the pages",
+    title: "공연",
+    description: "공연과 관련된 동아리",
     items: [
       {
         image: `${imagesPrefix}/navbars.jpg`,
@@ -132,8 +120,8 @@ export default [
     ],
   },
   {
-    title: "Input Areas",
-    description: "50+ elements that you need for text manipulation and insertion",
+    title: "전시",
+    description: "전시와 관련된 동아리",
     items: [
       {
         image: `${imagesPrefix}/newsletters.jpg`,
@@ -162,8 +150,8 @@ export default [
     ],
   },
   {
-    title: "Attention Catchers",
-    description: "20+ Fully coded components that popup from different places of the screen",
+    title: "종교",
+    description: "종교와 관련된 동아리",
     items: [
       {
         image: `${imagesPrefix}/alerts.jpg`,
@@ -192,8 +180,140 @@ export default [
     ],
   },
   {
-    title: "Elements",
-    description: "80+ carefully crafted small elements that come with multiple colors and shapes",
+    title: "체육",
+    description: "체육과 관련된 동아리",
+    items: [
+      {
+        image: `${imagesPrefix}/buttons.jpg`,
+        name: "Buttons",
+        count: 6,
+        route: "/sections/elements/buttons",
+      },
+      {
+        image: `${imagesPrefix}/avatars.jpg`,
+        name: "Avatars",
+        count: 2,
+        route: "/sections/elements/avatars",
+      },
+      {
+        image: `${imagesPrefix}/dropdowns.jpg`,
+        name: "Dropdowns",
+        count: 2,
+        route: "/sections/elements/dropdowns",
+      },
+      {
+        image: `${imagesPrefix}/switch.jpg`,
+        name: "Toggles",
+        count: 2,
+        route: "/sections/elements/toggles",
+      },
+      {
+        image: `${imagesPrefix}/social-buttons.jpg`,
+        name: "Social Buttons",
+        count: 2,
+        pro: true,
+      },
+      {
+        image: `${imagesPrefix}/breadcrumbs.jpg`,
+        name: "Breadcrumbs",
+        count: 1,
+        route: "/sections/elements/breadcrumbs",
+      },
+      {
+        image: `${imagesPrefix}/badges.jpg`,
+        name: "Badges",
+        count: 3,
+        route: "/sections/elements/badges",
+      },
+      {
+        image: `${imagesPrefix}/progress.jpg`,
+        name: "Progress Bars",
+        count: 4,
+        route: "/sections/elements/progress-bars",
+      },
+      {
+        image: `${imagesPrefix}/tables.jpg`,
+        name: "Tables",
+        count: 3,
+        pro: true,
+      },
+      {
+        image: `${imagesPrefix}/typography.jpg`,
+        name: "Typography",
+        count: 2,
+        route: "/sections/elements/typography",
+      },
+    ],
+  },
+  {
+    title: "학술",
+    description: "학술과 관련된 동아리",
+    items: [
+      {
+        image: `${imagesPrefix}/buttons.jpg`,
+        name: "Buttons",
+        count: 6,
+        route: "/sections/elements/buttons",
+      },
+      {
+        image: `${imagesPrefix}/avatars.jpg`,
+        name: "Avatars",
+        count: 2,
+        route: "/sections/elements/avatars",
+      },
+      {
+        image: `${imagesPrefix}/dropdowns.jpg`,
+        name: "Dropdowns",
+        count: 2,
+        route: "/sections/elements/dropdowns",
+      },
+      {
+        image: `${imagesPrefix}/switch.jpg`,
+        name: "Toggles",
+        count: 2,
+        route: "/sections/elements/toggles",
+      },
+      {
+        image: `${imagesPrefix}/social-buttons.jpg`,
+        name: "Social Buttons",
+        count: 2,
+        pro: true,
+      },
+      {
+        image: `${imagesPrefix}/breadcrumbs.jpg`,
+        name: "Breadcrumbs",
+        count: 1,
+        route: "/sections/elements/breadcrumbs",
+      },
+      {
+        image: `${imagesPrefix}/badges.jpg`,
+        name: "Badges",
+        count: 3,
+        route: "/sections/elements/badges",
+      },
+      {
+        image: `${imagesPrefix}/progress.jpg`,
+        name: "Progress Bars",
+        count: 4,
+        route: "/sections/elements/progress-bars",
+      },
+      {
+        image: `${imagesPrefix}/tables.jpg`,
+        name: "Tables",
+        count: 3,
+        pro: true,
+      },
+      {
+        image: `${imagesPrefix}/typography.jpg`,
+        name: "Typography",
+        count: 2,
+        route: "/sections/elements/typography",
+      },
+    ],
+  },
+  {
+    title: "봉사",
+    description: "봉사와 관련된 동아리",
     items: [
       {
         image: `${imagesPrefix}/buttons.jpg`,
