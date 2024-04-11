@@ -35,7 +35,12 @@ import data from "pages/Presentation/sections/data/designBlocksData";
 import ClubIntro from "form/clubIntro";
 import Recruit from "form/recruit";
 
-function DesignBlocks() {
+//toggle
+import { useRecoilValue } from "recoil";
+import { isOnState } from "examples/Navbars/DefaultNavbar/atoms";
+
+function DesignBlocks(typeOfMenu) {
+  const isOn = useRecoilValue(isOnState);
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
@@ -85,7 +90,7 @@ function DesignBlocks() {
             sx={{ mb: 2 }}
           />
           <MKTypography variant="h2" fontWeight="bold">
-            Huge collection of sections
+            {isOn ? `리크루팅 중인 ${typeOfMenu}` : `전체 ${typeOfMenu}`}
           </MKTypography>
           <MKTypography variant="body1" color="text">
             We have created multiple options for you to put together and customise into pixel

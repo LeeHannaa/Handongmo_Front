@@ -23,9 +23,12 @@
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
     "@testing-library/user-event": "14.4.3",
+    "axios": "^1.6.8",
     "chroma-js": "2.4.2",
     "eslint-config-react-app": "^7.0.1",
     "flatpickr": "4.6.13",
+    "install": "^0.13.0",
+    "npm": "^10.5.0",
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-copy-to-clipboard": "5.1.0",
@@ -38,6 +41,7 @@
     "react-router-dom": "6.10.0",
     "react-scripts": "5.0.1",
     "react-syntax-highlighter": "15.5.0",
+    "recoil": "^0.7.7",
     "styled-components": "^6.1.8",
     "web-vitals": "3.3.1"
   },
@@ -49,6 +53,7 @@
     "lint": "eslint ./src",
     "prettify": "prettier --write ."
   },
+  "proxy": "http://localhost:8080",
   "eslintConfig": {
     "extends": [
       "react-app",

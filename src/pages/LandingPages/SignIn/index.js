@@ -45,6 +45,9 @@ import routes from "routes";
 // Images
 import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 
+// axios
+import axios from "axios";
+
 function SignInBasic() {
   const [rememberMe, setRememberMe] = useState(false);
 
@@ -56,7 +59,17 @@ function SignInBasic() {
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
+          route: "http://localhost:8080/handongmo/google/login",
+          onClick: () => {
+            axios
+              .get("http://localhost:8080/handongmo/google/login")
+              .then((response) => {
+                console.log("서버 응답:", response);
+              })
+              .catch((error) => {
+                console.error("오류 발생:", error);
+              });
+          },
           label: "로그인",
           color: "info",
         }}
