@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
+import React from "react";
 import { Link } from "react-router-dom";
 
 // @mui material components
@@ -30,6 +31,9 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 
 // Data
 import data from "pages/Presentation/sections/data/designBlocksData";
+
+import ClubIntro from "form/clubIntro";
+import Recruit from "form/recruit";
 
 //toggle
 import { useRecoilValue } from "recoil";
@@ -65,6 +69,9 @@ function DesignBlocks(typeOfMenu) {
 
   return (
     <MKBox component="section" my={6} py={6}>
+      <ClubIntro></ClubIntro>
+      <Recruit></Recruit>
+
       <Container>
         <Grid
           container
