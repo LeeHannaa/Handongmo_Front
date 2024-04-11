@@ -48,6 +48,7 @@ import axios from "axios";
 
 function Presentation() {
   let [searchParams] = useSearchParams();
+  const club = "동아리";
 
   console.log("memberID : ", searchParams.get("memberId"));
   return (
@@ -98,7 +99,7 @@ function Presentation() {
                 },
               })}
             >
-              한동대 동아리 모음집{" "}
+              한동대 동아리 모음집
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -125,7 +126,8 @@ function Presentation() {
       >
         {/* 카드 위쪽 부분 */}
         <Counters />
-        <DesignBlocks />
+        {/* 밑에거 동아리, 동호회, 학회로 바꾸기 */}
+        <DesignBlocks typeOfMenu={club} />
         <Pages />
         <Container sx={{ mt: 6 }}></Container>
         <Container>
