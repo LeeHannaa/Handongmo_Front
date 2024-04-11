@@ -107,7 +107,7 @@ function Presentation() {
       >
         {/* 카드 위쪽 부분 */}
         <Counters />
-        <DesignBlocks />
+        <DesignBlocks typeOfMenu="동호회" />
         <Pages />
         <Container sx={{ mt: 6 }}></Container>
         <Container>

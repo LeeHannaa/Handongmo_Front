@@ -54,9 +54,6 @@ import Society from "pages/Presentation/components/Clubs/Society";
 import Conference from "pages/Presentation/components/Clubs/Conference";
 
 // Sections
-const current = 1; // 현재 값에 해당하는 값을 정의합니다.
-
-const dynamicName = current == 2 ? "동호회" : current == 3 ? "학회" : "동아리";
 
 const routes = [
   {
@@ -99,26 +96,23 @@ const routes = [
   },
 
   {
-    name: dynamicName,
+    name: "동아리",
     icon: <Icon>article</Icon>,
     collapse: [
       {
         name: "동아리",
-        current: 1,
         description: "동아리에 참여 하고 싶다면..",
         route: "/pages/Presentation/components/Clubs/Club",
         component: <Club />,
       },
       {
         name: "동호회",
-        current: 2,
         description: "동아리보다 자유로운..",
         route: "/pages/Presentation/components/Clubs/Society",
         component: <Society />,
       },
       {
         name: "학회",
-        current: 3,
         description: "학과를 위한..",
         route: "/pages/Presentation/components/Clubs/Conference",
         component: <Conference />,

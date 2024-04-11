@@ -44,6 +44,7 @@ import bgImage from "assets/images/bg-presentation.jpg";
 
 // main page
 function Presentation() {
+  const conference = "학회";
   return (
     <>
       <DefaultNavbar
@@ -107,7 +108,7 @@ function Presentation() {
       >
         {/* 카드 위쪽 부분 */}
         <Counters />
-        <DesignBlocks />
+        <DesignBlocks typeOfMenu={JSON.stringify(conference)} />
         <Pages />
         <Container sx={{ mt: 6 }}></Container>
         <Container>
